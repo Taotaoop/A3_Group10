@@ -4,9 +4,9 @@
 
 
 ## Endpoints and Parameters
-GET findCourseByID(courseID)
-GET findCourseByTerm(term)
-GET findCourseByLEvel(level)
+- GET findCourseByID(courseID)
+- GET findCourseByTerm(term)
+- GET findCourseByLEvel(level)
 ## Description of Resources
 
 ## Sample Request with Sample Respons
