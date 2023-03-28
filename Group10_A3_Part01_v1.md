@@ -80,41 +80,7 @@ Here are the three sample requests for getting course information from our API:
 }
 ```
 
-#### CourseID (String)
-- The subject and crouse number of a course.
 
-#### CourseName(String)  
-- The course title.
-
-#### Prerequisites(String)  
-- The prerequisites of the course.
-
-#### Description(String)
-- The description of the course.
-
-#### Credits(int)
-- Credits hours of the course.
-
-#### Section(JSON Object)
-The specific information for each lecture section.
-There is an list for each lecture section. Including values of:
-- Instruction's name (String), 
-- Days scheduled (String), 
-- Time scheduled (String),
-- Start and end dates for the course (String),
-- Course Capacity (int).
-
-#### Lab(JSON Object)
-The specific information for each lab section.
-There is an list for each lab section.Including values of:
-- TA's name (String), 
-- Days scheduled (String), 
-- Time scheduled (String),
-- Start and end dates for the course(String),
-- Lab capacity(int).
-
-#### Attribute(String)
-- The attribute of the course.
 ### Response Example
 ```json
 {
