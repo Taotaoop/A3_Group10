@@ -35,7 +35,7 @@ Here are the three sample requests for getting course information from our API:
 ```{
      "result": [
      {
-     "courseID": "<String>" ,
+     "CourseID": "<String>" ,
      "CourseName": "<String>",
      "Credits"; "<Int>"
      },
@@ -47,7 +47,7 @@ Here are the three sample requests for getting course information from our API:
 ```{
      "result": [
      {
-     "courseID": "<String>" ,
+     "CourseID": "<String>" ,
      "CourseName": "<String>",
      "Credits": "<Int>",
      "Section": "<Json Object>"
@@ -62,7 +62,7 @@ Here are the three sample requests for getting course information from our API:
 {
   "results":
   {
-  "CrouseID": "<String>",
+  "CourseID": "<String>",
   "CourseName": "<String>",
   "Prerequisites": "<String>",
   "Description": "<String>",
@@ -86,7 +86,7 @@ Here are the three sample requests for getting course information from our API:
 {
   "results":
   {
-  "CrouseID": "COMP3430",
+  "CourseID": "COMP3430",
   "CourseName": "Operating Systems",
   "Prerequisites": "one of COMP 2140 or COMP 2061; and COMP 2280 or ECE 3610.",
   "Description": "Operating systems, their design, implementation, and usage.",
@@ -103,3 +103,124 @@ Here are the three sample requests for getting course information from our API:
   }
 }
 ```
+
+## Sample Requests
+
+* ### GET request with 1 parameter i.e. Year
+
+  ```
+    https://UofMCSEnrollment.ca/api/courses?{2023}
+  ```
+
+  ### Response
+    ```json
+      {
+        "result":[
+          {
+            "CourseID": "COMP1010",
+            "CourseName": "Introductory Computer Science 1",
+            "Credits": 3,
+          },
+          {
+            "CourseID": "COMP1012",
+            "CourseName": "Computer Programming for Scientists and Engineers",
+            "Credits": 3,
+          },
+          {
+            "CourseID": "COMP1020",
+            "CourseName": "Introductory Computer Science 2",
+            "Credits": 3,
+          },
+          {
+            "CourseID": "COMP2140",
+            "CourseName": "Data Structures and Algorithms",
+            "Credits": 3,
+          },
+          {
+            "CourseID": "COMP2160",
+            "CourseName": "Programming Practices",
+            "Credits": 3,
+          },
+          {
+            "CourseID": "COMP3020",
+            "CourseName": "Human-Computer Interaction 1",
+            "Credits": 3,
+          }
+        ]
+      }
+    ```
+
+* ### GET request with 2 parameters i.e. Year and CourseID
+  
+  ```
+    https://UofMCSEnrollment.ca/api/courses?{2023}&{Winter}
+  ```
+  
+  ### Response
+    ```json
+      {
+        "result":[
+          {
+            "CourseID": "COMP1010",
+            "CourseName": "Introductory Computer Science 1",
+            "Credits": 3,
+          },
+          {
+            "CourseID": "COMP1012",
+            "CourseName": "Computer Programming for Scientists and Engineers",
+            "Credits": 3,
+          },
+          {
+            "CourseID": "COMP1020",
+            "CourseName": "Introductory Computer Science 2",
+            "Credits": 3,
+          },
+          {
+            "CourseID": "COMP1500",
+            "CourseName": "Computing: Ideas and Innovation",
+            "Credits": 3,
+          },
+          {
+            "CourseID": "COMP1600",
+            "CourseName": "Navigating Your Digital World",
+            "Credits": 3,
+          },
+          {
+            "CourseID": "COMP2080",
+            "CourseName": "Analysis of Algorithms",
+            "Credits": 3,
+          }
+        ]
+      }
+    ```
+
+    * ### GET request with 3 parameters i.e. Year, Term and CourseID
+
+  ```
+    https://UofMCSEnrollment.ca/api/courses?{2023}&{Winter}&{COMP3430}
+  ```
+
+  ### Response
+
+  ```json
+  {
+  "results":
+  {
+    "CourseID": "COMP3430",
+    "CourseName": "Operating Systems",
+    "Prerequisites": "one of COMP 2140 or COMP 2061; and COMP 2280 or ECE 3610.",
+    "Description": "Operating systems, their design, implementation, and usage.",
+    "Credits": 3,
+    "Section": {
+      "A01": ["Franklin Bristow", "MWF", "8:30am-9:20am", "01/09-04/12", 90],
+      "A02": ["Robert W. Guderian", "TR", "10:00am-11:15am", "01/09-04/12", 90]
+    },
+    "Lab": {
+      "B01": ["Justin Smith", "T", "04:00 pm-05:15 pm", "01/09-04/12", 25],
+      "B02": ["Kathie Anderson", "R", "04:00 pm-05:15 pm", "01/09-04/12", 25]
+    },
+    "Attribute": "Science Requirement for BA, Science"
+    }
+  }
+  ```
+
