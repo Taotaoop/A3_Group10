@@ -1,7 +1,7 @@
-# UofM Computer Science Crouse API
-
+# UofM Find Course API
+This API is designed to support enrollment at UofM. This set of APIs would provide a list of information related to the courses they are interested in. Students could specify relevant parameters such as Year, Term and CourseID to retrieve course information.
 ## API description
-This API is designed to support enrollment at UofM. This set of APIs would provide a list of information related to the courses they are interested in. Students could specify relevant parameters to retrieve crouse information.
+Our API is a simple REST api, where user can do GET requests to the endpoint.
 
 ## Endpoints and Parameters
 #### Endpoint
@@ -10,8 +10,8 @@ This API is designed to support enrollment at UofM. This set of APIs would provi
 | Parameter  | Type   | Description  | Required  |
 |------------|--------|--------------|-----------|
 | Year       | Int    | the academic year in which the course is being offered. Ex:2023|  Yes |
-| Term       | String | the specific part of the academic year. Ex:Fall, Winter        |  No  |
-| CourseID   | String | the ID of a specific course. Ex:COMP3040                       |  No  |
+| Term       | String | the specific part of the academic year. Ex:Fall, Winter        |  Optional  |
+| CourseID   | String | the ID of a specific course. Ex:COMP3040                       |  Optional  |
 
 ## Description of Resources
 | **Parameters**  | **Type**  | **Description** |
@@ -26,6 +26,8 @@ This API is designed to support enrollment at UofM. This set of APIs would provi
 | Attribute  | String  | The attribute of the course  |
 
 
+## Sample Requests
+Here are the three sample requests for getting course information from our API:
 
 ### 1.List all Computer Science courses in a specific academic year.
 ```https://UofMCSEnrollment.ca/api/courses?{Year}```
@@ -56,7 +58,8 @@ This API is designed to support enrollment at UofM. This set of APIs would provi
 ### 3. List a specific Computer Science course in a specific academic year and term.
 ```https://UofMCSEnrollment.ca/api/courses?{Year}&{Term}&{CourseID}```
 #### Description
-```{
+```
+{
   "results":
   {
   "CrouseID": "<String>",
@@ -112,7 +115,7 @@ There is an list for each lab section.Including values of:
 
 #### Attribute(String)
 - The attribute of the course.
-Response Example
+### Response Example
 ```json
 {
   "results":
@@ -134,5 +137,3 @@ Response Example
   }
 }
 ```
-
-## Sample Request with Sample Response
