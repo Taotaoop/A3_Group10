@@ -109,31 +109,27 @@ https://UofMCSEnrollment.ca/api/courses?{2023}&{Winter}
         "CourseID": "COMP1010",
         "CourseName": "Introductory Computer Science 1",
         "Credits": 3,
+         "Section": {
+          "A01": ["Franklin Bristow", "MWF", "8:30am-9:20am", "01/09-04/12", 90],
+          "A02": ["Robert W. Guderian", "TR", "10:00am-11:15am", "01/09-04/12", 90]
+        },
       },
       {
         "CourseID": "COMP1012",
         "CourseName": "Computer Programming for Scientists and Engineers",
         "Credits": 3,
+        "Section": {
+          "A01": ["Franklin Bristow", "TR", "10:30am-11:20am", "01/09-04/12", 90]
+        },
       },
       {
         "CourseID": "COMP1020",
         "CourseName": "Introductory Computer Science 2",
         "Credits": 3,
-      },
-      {
-        "CourseID": "COMP1500",
-        "CourseName": "Computing: Ideas and Innovation",
-        "Credits": 3,
-      },
-      {
-        "CourseID": "COMP1600",
-        "CourseName": "Navigating Your Digital World",
-        "Credits": 3,
-      },
-      {
-        "CourseID": "COMP2080",
-        "CourseName": "Analysis of Algorithms",
-        "Credits": 3,
+         "Section": {
+           "A01": ["Franklin Bristow", "MWF", "8:30am-9:20am", "01/09-04/12", 90],
+           "A02": ["Robert W. Guderian", "TR", "10:00am-11:15am", "01/09-04/12", 90]
+          },
       }
     ]
   }
